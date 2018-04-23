@@ -97,26 +97,28 @@
                     </li>
                     <li class="xn-title">Navigation</li>
                     <li class="">
-                        <a href="{$base_url}"><span class="fa fa-dashboard"></span> <span class="xn-text">Dashboard</span></a>
+                        <a href="{$base_url}"><span class="fa fa-dashboard"></span> <span class="xn-text">Profile</span></a>
                     </li>                    
                     <li class="xn-openable">
-                        <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-cogs"></span> <span class="xn-text">Master Data</span></a>
+                        <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-cogs"></span> <span class="xn-text">Tentang Kami</span></a>
                         <ul>
-                            <li><a href="{$base_url}masterdata/users"><span class="fa fa-user"></span>User</a></li>
-                            <li><a href="{$base_url}masterdata/members"><span class="fa fa-users"></span>Members</a></li>
-                            <li><a href="{$base_url}masterdata/merchant_goods"><span class="fa fa-shopping-cart"></span>Barang Toko</a></li>
+                            <li><a href="{$base_url}masterdata/users"><span class="fa fa-user"></span>Product dan Layanan</a></li>
+                            <li><a href="{$base_url}masterdata/members"><span class="fa fa-users"></span>Keunggulan</a></li>
+                            <li><a href="{$base_url}masterdata/merchant_goods"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
+                            <li><a href="{$base_url}masterdata/merchant_goods"><span class="fa fa-shopping-cart"></span>Visi, Misi dan Moto</a></li>
+                            <li><a href="{$base_url}masterdata/merchant_goods"><span class="fa fa-shopping-cart"></span>Legalitas Kami</a></li>
                         </ul>
                     </li>
-                    <li class="xn-openable">
-                        <a href="#"><span class="fa fa-dollar"></span><span class="xn-text">Transaksi</span></a>
-                        <ul>
+                    <li class="">
+                        <a href="#"><span class="fa fa-dollar"></span><span class="xn-text">Berita</span></a>
+                        <!-- <ul>
                             <li><a href="{$base_url}transaksi/toko"><span class="fa fa-shopping-cart"></span> Toko</a></li>
 
                             <li><a href="{$base_url}transaksi/Pengeluaran"><span class="fa fa-location-arrow"></span>Pengeluaran Keuangan</a></li>                            
                             <li><a href="{$base_url}booking"><span class="fa fa-book"></span> Booking Lapangan</a></li>
 
                             <li><a href="{$base_url}transaksi/pembayaran"><span class="fa fa-money"></span> Pembayaran Lapangan</a></li>
-                        </ul>   
+                        </ul>    -->
                     </li>
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-file-text-o"></span> <span class="xn-text">Laporan</span></a>
