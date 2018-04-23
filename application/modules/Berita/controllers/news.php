@@ -14,10 +14,6 @@ class news extends MY_Controller {
 
 	public function index()
 	{
-		$param_fieldtype = array('code_category' => 'USR');
-		$field_role = json_decode(($this->curl->simple_get($this->API.'Master_data/code_bycategory', $param_fieldtype)), true);
-
-		$this->templates->assign( 'role', $field_role);
-		$this->layout('news/news', '');
+		$this->layout('news', '');
 	}
 }
