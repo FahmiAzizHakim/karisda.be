@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-23 10:01:34
+/* Smarty version 3.1.30, created on 2018-04-23 10:26:56
   from "C:\xampp\htdocs\karisda.be\application\views\main_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5add92dedb0c04_56276885',
+  'unifunc' => 'content_5add98d0dcd8d8_81576783',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68451af699894ea4b77bc19afde39aa2bfcb9d43' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\views\\main_template.tpl',
-      1 => 1524470489,
+      1 => 1524471980,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5add92dedb0c04_56276885 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5add98d0dcd8d8_81576783 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -215,7 +215,7 @@ assets/images/users/avatar.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['s_user_n
                         <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-group"></span> <span class="xn-text">Tentang Kami</span></a>
                         <ul>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-masterdata/users"><span class="fa fa-user"></span>Product dan Layanan</a></li>
+about/product/"><span class="fa fa-user"></span>Product dan Layanan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 masterdata/members"><span class="fa fa-users"></span>Keunggulan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
