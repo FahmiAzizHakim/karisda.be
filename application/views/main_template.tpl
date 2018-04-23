@@ -41,7 +41,7 @@
         <script type="text/javascript" src="{$assets_url}js/plugins/bootstrap/bootstrap-select.js"></script>
         <script type="text/javascript" src="{$assets_url}js/plugins/tagsinput/jquery.tagsinput.min.js"></script>                
         <script type="text/javascript" src="{$assets_url}js/plugins/owl/owl.carousel.min.js"></script>                 
-        
+        <script type="text/javascript" src="{$assets_url}js/plugins/summernote/summernote.js"></script>
         <script type="text/javascript" src="{$assets_url}js/plugins/moment.min.js"></script>
         <script type="text/javascript" src="{$assets_url}js/plugins/daterangepicker/daterangepicker.js"></script>
         <script type='text/javascript' src='{$assets_url}js/plugins/noty/jquery.noty.js'></script>
