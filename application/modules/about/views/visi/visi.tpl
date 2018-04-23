@@ -1,7 +1,33 @@
 <div class="row">
     <div class="panel panel-default">
         <div class="panel-body">
-        <h3>Tentang Kami</h3>
+        <h3>Visi</h3>
+            <form role="form">
+                <div class="form-group">
+                    <div class="block">
+                        <textarea class="">
+                        </textarea>
+                     </div>
+                <div>
+                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
+                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
+                </div>
+            </form>
+            <br>
+        <h3>Moto</h3>
+            <form role="form">
+                <div class="form-group">
+                    <div class="block">
+                        <textarea class="">
+                        </textarea>
+                     </div>
+                <div>
+                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
+                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
+                </div>
+            </form>
+            <br>            
+        <h3>Misi</h3>
             <form role="form">
                 <div class="form-group">
 	                <div class="block">
