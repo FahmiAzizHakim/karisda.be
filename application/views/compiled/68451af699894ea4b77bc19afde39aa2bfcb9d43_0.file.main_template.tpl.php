@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.30, created on 2018-04-23 10:55:43
+=======
+/* Smarty version 3.1.30, created on 2018-04-23 10:52:05
+>>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
   from "C:\xampp\htdocs\karisda.be\application\views\main_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
+<<<<<<< HEAD
   'unifunc' => 'content_5add9f8f8285b9_54492002',
+=======
+  'unifunc' => 'content_5add9eb56addb6_94941607',
+>>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68451af699894ea4b77bc19afde39aa2bfcb9d43' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\views\\main_template.tpl',
+<<<<<<< HEAD
       1 => 1524473737,
+=======
+      1 => 1524473516,
+>>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5add9f8f8285b9_54492002 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5add9eb56addb6_94941607 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
 ?>
 <!DOCTYPE html>
 <html lang="en">

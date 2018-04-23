@@ -5,7 +5,7 @@
             <form role="form">
                 <div class="form-group">
                     <label>Judul</label>
-                    <input id="Keunggulan" type="text" class="form-control" placeholder="Nama User">
+                    <input id="Keunggulan" type="text" class="form-control" placeholder="Judul">
                 </div>
                 <div class="form-group">
                     <label>Detail</label>
