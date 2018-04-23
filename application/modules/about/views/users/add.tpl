@@ -26,7 +26,7 @@
 
                 </div>
 
-
+ 
                 <div class="form-group">
                     <label>Aktif Status</label>
                     <select id="activestatus" class="form-control select">
@@ -102,7 +102,7 @@
                 {
                     alert("Data Berhasil Diproses");
                     {/literal}
-                    window.location.replace("{$base_url}masterdata/users");
+                    window.location.replace("{$base_url}about/users");
                     {literal}
                 }
                 else

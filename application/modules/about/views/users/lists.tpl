@@ -35,7 +35,7 @@
     base_url = '{$base_url}';
     {literal}
     function EditUser(user_id){
-        window.location = base_url + 'masterdata/users/edit?user_id=' + user_id;
+        window.location = base_url + 'about/users/edit?user_id=' + user_id;
         }
     {/literal}
 </script>
