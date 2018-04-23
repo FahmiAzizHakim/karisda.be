@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.30, created on 2018-04-23 10:55:43
-=======
-/* Smarty version 3.1.30, created on 2018-04-23 10:52:05
->>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
+/* Smarty version 3.1.30, created on 2018-04-23 11:08:38
   from "C:\xampp\htdocs\karisda.be\application\views\main_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-<<<<<<< HEAD
-  'unifunc' => 'content_5add9f8f8285b9_54492002',
-=======
-  'unifunc' => 'content_5add9eb56addb6_94941607',
->>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
+  'unifunc' => 'content_5adda296530389_69094612',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68451af699894ea4b77bc19afde39aa2bfcb9d43' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\views\\main_template.tpl',
-<<<<<<< HEAD
-      1 => 1524473737,
-=======
-      1 => 1524473516,
->>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
+      1 => 1524474425,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5add9f8f8285b9_54492002 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5add9eb56addb6_94941607 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> c272a7cb2cc616f915b6317698a31d75f54dbe07
+function content_5adda296530389_69094612 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -237,7 +221,7 @@ assets/images/users/avatar.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['s_user_n
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 about/product/"><span class="fa fa-user"></span>Product dan Layanan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-about/keunggulan"><span class="fa fa-users"></span>Keunggulan</a></li>
+about/keunggulan/"><span class="fa fa-users"></span>Keunggulan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 about/about_us"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
@@ -247,7 +231,7 @@ about/Legalitas"><span class="fa fa-shopping-cart"></span>Legalitas Kami</a></li
                     </li>
                     <li class="">
                         <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-berita/lists"><span class="fa fa-dollar"></span><span class="xn-text">Berita</span></a>
+berita/news"><span class="fa fa-dollar"></span><span class="xn-text">Berita</span></a>
                         <!-- <ul>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 transaksi/toko"><span class="fa fa-shopping-cart"></span> Toko</a></li>
