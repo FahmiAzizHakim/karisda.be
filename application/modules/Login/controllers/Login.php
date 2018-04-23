@@ -6,29 +6,33 @@ class Login extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('M_auth');
 
 	}
 
 	public function index()
 	{
+		if($this->session->userdata('user_id') != ''){
+			redirect('','refresh');
+		}
     	$this->layout_empty('login', '');
+
 	}
 
 	function check_user(){
 		$param = array("username" => $this->input->post('username'),
-						"password" => $this->input->post('password'));
-		$data = json_decode(($this->curl->simple_post($this->API.'Auth/check_user', $param)), true);
-		if($data['status'] == "success"){
-			foreach($data['data'] as $sess){
-	        	$sess_data['user_code'] = $sess['user_code'];
-	    	    $sess_data['user_id'] = $sess['user_id'];
-	    	    $sess_data['user_name'] = $sess['user_name'];
-	        	$sess_data['user_role'] = $sess['user_group'];
-	    	    $sess_data['user_company_code'] = $sess['company_code'];
+						"password" => md5(substr(sha1($this->input->post('password') . 'reds'),1,20)));
+		$cek = $this->M_auth->cek_user($param['username'], $param['password'])->num_rows();
+    	$data = $this->M_auth->cek_user($param['username'], $param['password'])->result();
+		if($cek > 0 && $cek != null){
+			foreach($data as $sess){
+	        	$sess_data['user_code'] = $sess->user_code;
+	    	    $sess_data['user_id'] = $sess->id;
+	    	    $sess_data['user_name'] = $sess->user_name;
 	    	}
         	$this->session->set_userdata($sess_data);
     	}
-    	echo json_encode($data);
+    	echo json_encode($cek);
     }
 
     function logout()

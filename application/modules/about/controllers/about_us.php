@@ -9,15 +9,30 @@ class About_Us extends MY_Controller {
 		if($this->session->userdata('user_id') == ''){
 			redirect('Login','refresh');
 		}
+		$this->load->model('M_master');
 
 	}
 
 	public function index()
 	{
-		$param_fieldtype = array('code_category' => 'USR');
-		$field_role = json_decode(($this->curl->simple_get($this->API.'Master_data/code_bycategory', $param_fieldtype)), true);
+		$data = $this->M_master->getDataWhere('judul','Tentang_Kami','tbl_aboutus')->row_array();
 
-		$this->templates->assign( 'role', $field_role);
+		$this->templates->assign( 'data', $data);
 		$this->layout('about_us/about_us', '');
+	}
+
+	public function edit()
+	{
+		$param = $this->input->post();
+		$param['lastupd_date'] = date('d/m/Y');
+
+		$proses = $this->M_master->update('judul','Tentang_Kami',$param,'tbl_aboutus');
+
+		if ($proses == true) {
+			$result = "success";
+		}else{
+			$result = "error";
+		}
+		echo json_encode(array("status" => $result, "error" => 0));
 	}
 }

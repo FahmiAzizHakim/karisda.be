@@ -4,34 +4,17 @@
         <h3>Visi</h3>
             <form role="form">
                 <div class="form-group">
-                    <div class="form-group">
-                    <input id="Visi" type="text" class="form-control" placeholder="">
+                    <label>Visi</label>
+                    <input id="visi" type="text" class="form-control" value="{$visi.isi}">
                 </div>
-                <div>
-                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
-                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
-                </div>
-            </form>
-            <br>
-        <h3>Moto</h3>
-            <form role="form">
                 <div class="form-group">
-                    <div class="form-group">
-                    <input id="Moto" type="text" class="form-control" placeholder="">
+                    <label>Motto</label>
+                    <input id="motto" type="text" class="form-control" value="{$motto.isi}">
                 </div>
-                <div>
-                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
-                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
-                </div>
-            </form>
-            <br>            
-        <h3>Misi</h3>
-            <form role="form">
                 <div class="form-group">
-	                <div class="block">
-                        <textarea class="summernote">
-                        </textarea>
-                     </div>
+	                <label>Misi</label>
+                    <textarea class="summernote" id="misi">{$misi.isi}
+                    </textarea>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
@@ -46,33 +29,21 @@
     {literal}
     $("#BtnSubmit").click(function(){
     {/literal}
-        var api_url = '{$api_url}';
+        var base_url = '{$base_url}';
     {literal}
-        if($("#field_name").val() == ""){
-            alert("Nama Harus Diisi");
-            $("#field_name").focus();
+        if($("#visi").val() == ""){
+            alert("visi Harus Diisi");
+            $("#visi").focus();
             return false;
         };
-        if($("#field_code").val() == ""){
-            alert("User Code Harus Diisi");
-            $("#field_code").focus();
+        if($("#motto").val() == ""){
+            alert("motto Harus Diisi");
+            $("#motto").focus();
             return false;
         };
-        if($("#field_password").val() == ""){
-            alert("Password Harus Diisi");
-            $("#field_password").focus();
-            return false;
-
-        };
-        if($("#field_password2").val() != $("#field_password").val()){
-            alert("Password Harus Sama");
-            $("#field_password").focus();
-            return false;
-            
-        };
-        if($("#field_role").val() == ""){
-            alert("Peran Harus Diisi");
-            $("#field_role").focus();
+        if($("#misi").val() == ""){
+            alert("misi Harus Diisi");
+            $("#misi").focus();
             return false;
 
         };
@@ -82,25 +53,21 @@
 
         $.ajax({
             type: "POST",
-            url: api_url + "Master_data/field_insert_user",
+            url: base_url + "about/visi/edit",
             dataType: "json",
-            data: { field_name : $("#field_name").val(),
-                    field_code : $("#field_code").val(),
-                    field_password : $("#field_password").val(),
-                    field_role : $("#field_role").val(),
-                    activestatus : $("#activestatus").val(),
-                    created_by : $("#s_user_name").val(),
-                    company_code : $("#s_company_code").val() },
+            data: { visi : $("#visi").val(),
+                    misi : $("#misi").code(),
+                    motto : $("#motto").val(),
+                    lastupd_by : $("#s_user_name").val() },
             success: function(data) {
                 $("#BtnSubmit").removeAttr("disabled");
                 $("#noty_topCenter_layout_container").remove();
-                alert(data.status);
 
                 if(data.status == "success")
                 {
                     alert("Data Berhasil Diproses");
                     {/literal}
-                    window.location.replace("{$base_url}masterdata/users");
+                    window.location.replace("{$base_url}about/visi");
                     {literal}
                 }
                 else

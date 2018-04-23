@@ -67,13 +67,13 @@
                 $("#BtnLogin").removeAttr("disabled");
                 $("#noty_topCenter_layout_container").remove();
 
-                if(data.status == "success")
+                if(data > 0 && data != "0" && data != null)
                 {
                     window.location.href = base_url;
                 }
                 else
                 {
-                    alert(data.error);
+                    alert(data);
                 }
 
             }
