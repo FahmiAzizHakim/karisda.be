@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-23 10:27:05
+/* Smarty version 3.1.30, created on 2018-04-23 10:44:22
   from "C:\xampp\htdocs\karisda.be\application\modules\about\views\product\lists.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5add98d909d333_67252792',
+  'unifunc' => 'content_5add9ce6ee5c28_04508414',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7e48909df2c2ba42ef0451953e4e8ed5a4cb5bac' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\modules\\about\\views\\product\\lists.tpl',
-      1 => 1524471795,
+      1 => 1524473036,
       2 => 'file',
     ),
   ),
@@ -20,128 +20,65 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5add98d909d333_67252792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5add9ce6ee5c28_04508414 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
-    <div class="panel panel-default">
-        <div class="panel-body">
-        <h3>Visi</h3>
-            <form role="form">
-                <div class="form-group">
-                    <div class="block">
-                        <textarea class="">
-                        </textarea>
-                     </div>
-                <div>
-                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
-                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
+        <div class="panel panel-default">
+            <div class="panel-body">
+            <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+about/product/add"><button type="button" class="btn btn-success active">&nbsp;<span class="fa fa-plus"></span>Add&nbsp;</button></a>
+            <br />
+            <br />
+                <div class="table-responsive">
+                    <table class="table datatable">
+                        <thead>
+                        <tr>
+                            <th width="200px">Nama</th>
+                            <th>Keterangan</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data_users']->value, 'row');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
+?>
+                                <tr>
+                                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['user_code'];?>
+</td>
+                                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['user_name'];?>
+</td>
+                                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['user_group'];?>
+</td>
+                                    <td><?php echo $_smarty_tpl->tpl_vars['row']->value['activestatus'];?>
+</td>
+                                    <td><button type="button" class="btn btn-success active" onclick="EditUser('<?php echo $_smarty_tpl->tpl_vars['row']->value['user_id'];?>
+')"><span class="fa fa-pencil"></span>Edit</button></td>
+                                </tr>
+                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+ -->
+                        </tbody>
+                    </table>
                 </div>
-            </form>
-            <br>
-        <h3>Nama</h3>
-            <form role="form">
-                <div class="form-group">
-                    <div class="block">
-                        <textarea class="">
-                        </textarea>
-                     </div>
-                <div>
-                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
-                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
-                </div>
-            </form>
-            <br>            
-        <h3>Keterangan</h3>
-            <form role="form">
-                <div class="form-group">
-	                <div class="block">
-                        <textarea class="summernote">
-                        </textarea>
-                     </div>
-                <div>
-                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
-                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
-                </div>
-            </form>
-
+            </div>
         </div>
-    </div>
 </div>
-
 <?php echo '<script'; ?>
  type="text/javascript">
-    
-    $("#BtnSubmit").click(function(){
-    
-        var api_url = '<?php echo $_smarty_tpl->tpl_vars['api_url']->value;?>
+    base_url = '<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 ';
     
-        if($("#field_name").val() == ""){
-            alert("Nama Harus Diisi");
-            $("#field_name").focus();
-            return false;
-        };
-        if($("#field_code").val() == ""){
-            alert("User Code Harus Diisi");
-            $("#field_code").focus();
-            return false;
-        };
-        if($("#field_password").val() == ""){
-            alert("Password Harus Diisi");
-            $("#field_password").focus();
-            return false;
-
-        };
-        if($("#field_password2").val() != $("#field_password").val()){
-            alert("Password Harus Sama");
-            $("#field_password").focus();
-            return false;
-            
-        };
-        if($("#field_role").val() == ""){
-            alert("Peran Harus Diisi");
-            $("#field_role").focus();
-            return false;
-
-        };
-
-        noty({text: 'Loading', layout: 'topCenter'});
-        $("#BtnSubmit").attr("disabled", true);
-
-        $.ajax({
-            type: "POST",
-            url: api_url + "Master_data/field_insert_user",
-            dataType: "json",
-            data: { field_name : $("#field_name").val(),
-                    field_code : $("#field_code").val(),
-                    field_password : $("#field_password").val(),
-                    field_role : $("#field_role").val(),
-                    activestatus : $("#activestatus").val(),
-                    created_by : $("#s_user_name").val(),
-                    company_code : $("#s_company_code").val() },
-            success: function(data) {
-                $("#BtnSubmit").removeAttr("disabled");
-                $("#noty_topCenter_layout_container").remove();
-                alert(data.status);
-
-                if(data.status == "success")
-                {
-                    alert("Data Berhasil Diproses");
-                    
-                    window.location.replace("<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-masterdata/users");
-                    
-                }
-                else
-                {
-                    alert("Data Gagal Diproses, Harap Hubungin Call Center");
-                }
-
-            }
-        });
-    });
+    function EditUser(user_id){
+        window.location = base_url + 'masterdata/users/edit?user_id=' + user_id;
+        }
     
-
 <?php echo '</script'; ?>
-><?php }
+>
+                            
+                            <?php }
 }
