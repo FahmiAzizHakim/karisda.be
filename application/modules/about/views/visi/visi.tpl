@@ -4,10 +4,9 @@
         <h3>Visi</h3>
             <form role="form">
                 <div class="form-group">
-                    <div class="block">
-                        <textarea class="">
-                        </textarea>
-                     </div>
+                    <div class="form-group">
+                    <input id="Visi" type="text" class="form-control" placeholder="">
+                </div>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
@@ -17,10 +16,9 @@
         <h3>Moto</h3>
             <form role="form">
                 <div class="form-group">
-                    <div class="block">
-                        <textarea class="">
-                        </textarea>
-                     </div>
+                    <div class="form-group">
+                    <input id="Moto" type="text" class="form-control" placeholder="">
+                </div>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>

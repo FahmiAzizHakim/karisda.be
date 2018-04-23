@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-23 10:14:00
+/* Smarty version 3.1.30, created on 2018-04-23 11:05:28
   from "C:\xampp\htdocs\karisda.be\application\modules\about\views\visi\visi.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5add95c82e1238_37515579',
+  'unifunc' => 'content_5adda1d8eb6c84_07865235',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f13631499ac81393e5fc1640bada1b4690aaf701' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\modules\\about\\views\\visi\\visi.tpl',
-      1 => 1524471234,
+      1 => 1524474325,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5add95c82e1238_37515579 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5adda1d8eb6c84_07865235 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
     <div class="panel panel-default">
@@ -28,10 +28,9 @@ function content_5add95c82e1238_37515579 (Smarty_Internal_Template $_smarty_tpl)
         <h3>Visi</h3>
             <form role="form">
                 <div class="form-group">
-                    <div class="block">
-                        <textarea class="">
-                        </textarea>
-                     </div>
+                    <div class="form-group">
+                    <input id="Visi" type="text" class="form-control" placeholder="">
+                </div>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
@@ -41,10 +40,9 @@ function content_5add95c82e1238_37515579 (Smarty_Internal_Template $_smarty_tpl)
         <h3>Moto</h3>
             <form role="form">
                 <div class="form-group">
-                    <div class="block">
-                        <textarea class="">
-                        </textarea>
-                     </div>
+                    <div class="form-group">
+                    <input id="Moto" type="text" class="form-control" placeholder="">
+                </div>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>

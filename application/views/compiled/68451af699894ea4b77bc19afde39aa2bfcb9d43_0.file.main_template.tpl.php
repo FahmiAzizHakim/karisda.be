@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.30, created on 2018-04-23 10:37:54
-=======
-/* Smarty version 3.1.30, created on 2018-04-23 10:35:40
->>>>>>> 10b40a25cff50499c65ba3628feeadfae753de73
+/* Smarty version 3.1.30, created on 2018-04-23 10:55:43
   from "C:\xampp\htdocs\karisda.be\application\views\main_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-<<<<<<< HEAD
-  'unifunc' => 'content_5add9b62262529_39748738',
-=======
-  'unifunc' => 'content_5add9adcccbd92_83675595',
->>>>>>> 10b40a25cff50499c65ba3628feeadfae753de73
+  'unifunc' => 'content_5add9f8f8285b9_54492002',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68451af699894ea4b77bc19afde39aa2bfcb9d43' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\views\\main_template.tpl',
-<<<<<<< HEAD
-      1 => 1524472672,
-=======
-      1 => 1524472442,
->>>>>>> 10b40a25cff50499c65ba3628feeadfae753de73
+      1 => 1524473737,
       2 => 'file',
     ),
   ),
@@ -32,17 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5add9b62262529_39748738 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5add9adcccbd92_83675595 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 10b40a25cff50499c65ba3628feeadfae753de73
+function content_5add9f8f8285b9_54492002 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>        
         <!-- META SECTION -->
-        <title>FutsalKu.id</title>            
+        <title>Karinda</title>            
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -99,6 +83,10 @@ js/plugins/scrolltotop/scrolltopcontrol.js"><?php echo '</script'; ?>
         <?php echo '<script'; ?>
  type='text/javascript' src='<?php echo $_smarty_tpl->tpl_vars['assets_url']->value;?>
 new/bootstrap-datepicker.js'><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['assets_url']->value;?>
+js/plugins/fileinput/fileinput.min.js"><?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['assets_url']->value;?>
@@ -233,7 +221,7 @@ assets/images/users/avatar.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['s_user_n
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 about/product/"><span class="fa fa-user"></span>Product dan Layanan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-masterdata/members"><span class="fa fa-users"></span>Keunggulan</a></li>
+about/keunggulan"><span class="fa fa-users"></span>Keunggulan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 about/about_us"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
