@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-23 10:22:56
+/* Smarty version 3.1.30, created on 2018-04-23 11:01:53
   from "C:\xampp\htdocs\karisda.be\application\modules\about\views\legal\add.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5add97e0de3215_38469855',
+  'unifunc' => 'content_5adda101aa3ee8_50911306',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9373de2632a5f4781ee7c14fb44c03130e3a9912' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\modules\\about\\views\\legal\\add.tpl',
-      1 => 1524471773,
+      1 => 1524474044,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5add97e0de3215_38469855 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5adda101aa3ee8_50911306 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
     <div class="panel panel-default">
         <div class="panel-body">
-        <h3>Data User</h3>
+        <h3>Legalitas</h3>
             <form role="form">
                 <div class="form-group">
 
 	                <label>Nama </label>
-	                <input id="field_name" type="text" class="form-control" placeholder="Nama User">
+	                <input id="field_name" type="text" class="form-control" placeholder="Nama ">
                 </div>
            
                 <div class="form-group">
