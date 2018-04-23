@@ -15,12 +15,10 @@ class news extends MY_Controller {
 	public function index()
 	{
 
-		$this->layout('news', '');
-
-    	$this->layout('news/lists', '');
+    	$this->layout('lists', '');
 	}
 	public function add()
 	{
-		$this->layout('news/add', '');
+		$this->layout('add', '');
 	}
 }

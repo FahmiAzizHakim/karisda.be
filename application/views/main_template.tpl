@@ -35,6 +35,7 @@
         <script type="text/javascript" src="{$assets_url}js/plugins/scrolltotop/scrolltopcontrol.js"></script>
              
         <script type='text/javascript' src='{$assets_url}new/bootstrap-datepicker.js'></script>
+        <script type="text/javascript" src="{$assets_url}js/plugins/fileinput/fileinput.min.js"></script>
         <script type="text/javascript" src="{$assets_url}js/plugins/bootstrap/bootstrap-timepicker.min.js"></script>
         <script type="text/javascript" src="{$assets_url}js/plugins/bootstrap/bootstrap-colorpicker.js"></script>
         <script type="text/javascript" src="{$assets_url}js/plugins/bootstrap/bootstrap-file-input.js"></script>
