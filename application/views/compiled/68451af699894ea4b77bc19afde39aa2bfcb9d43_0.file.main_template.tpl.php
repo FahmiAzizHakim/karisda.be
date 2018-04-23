@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-23 10:07:07
+/* Smarty version 3.1.30, created on 2018-04-23 10:26:57
   from "C:\xampp\htdocs\karisda.be\application\views\main_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5add942ba0a583_53723436',
+  'unifunc' => 'content_5add98d153dda4_52986338',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68451af699894ea4b77bc19afde39aa2bfcb9d43' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\views\\main_template.tpl',
-      1 => 1524470821,
+      1 => 1524471893,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5add942ba0a583_53723436 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5add98d153dda4_52986338 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -218,6 +218,7 @@ assets/images/users/avatar.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['s_user_n
 masterdata/users"><span class="fa fa-user"></span>Product dan Layanan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 masterdata/members"><span class="fa fa-users"></span>Keunggulan</a></li>
+<<<<<<< HEAD
 
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 about/about_us"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
@@ -227,6 +228,14 @@ about/visi"><span class="fa fa-shopping-cart"></span>Visi, Misi dan Moto</a></li
 
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 about/Legalitas"><span class="fa fa-shopping-cart"></span>Legalitas Kami</a></li>
+=======
+                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+about/about_us"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
+                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+about/visi"><span class="fa fa-shopping-cart"></span>Visi, Misi dan Moto</a></li>
+                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+masterdata/merchant_goods"><span class="fa fa-shopping-cart"></span>Legalitas Kami</a></li>
+>>>>>>> 7e892dd7d20d59c56a5ce8207028931bbfe614d0
                         </ul>
                     </li>
                     <li class="">

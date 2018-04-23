@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class About_Us extends MY_Controller {
+class visi extends MY_Controller {
 
 	function __construct()
 	{
@@ -18,6 +18,6 @@ class About_Us extends MY_Controller {
 		$field_role = json_decode(($this->curl->simple_get($this->API.'Master_data/code_bycategory', $param_fieldtype)), true);
 
 		$this->templates->assign( 'role', $field_role);
-		$this->layout('about_us/about_us', '');
+		$this->layout('visi/visi', '');
 	}
 }
