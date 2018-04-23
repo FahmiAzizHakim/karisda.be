@@ -97,10 +97,10 @@
                     </li>
                     <li class="xn-title">Navigation</li>
                     <li class="">
-                        <a href="{$base_url}"><span class="fa fa-dashboard"></span> <span class="xn-text">Profile</span></a>
+                        <a href="{$base_url}"><span class="fa fa-user"></span> <span class="xn-text">Profile</span></a>
                     </li>                    
                     <li class="xn-openable">
-                        <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-cogs"></span> <span class="xn-text">Tentang Kami</span></a>
+                        <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-group"></span> <span class="xn-text">Tentang Kami</span></a>
                         <ul>
                             <li><a href="{$base_url}masterdata/users"><span class="fa fa-user"></span>Product dan Layanan</a></li>
                             <li><a href="{$base_url}masterdata/members"><span class="fa fa-users"></span>Keunggulan</a></li>
@@ -120,7 +120,7 @@
                             <li><a href="{$base_url}transaksi/pembayaran"><span class="fa fa-money"></span> Pembayaran Lapangan</a></li>
                         </ul>    -->
                     </li>
-                    <li class="xn-openable">
+                    <!-- <li class="xn-openable">
                         <a href="#"><span class="fa fa-file-text-o"></span> <span class="xn-text">Laporan</span></a>
                         <ul>
                             <li><a href="layout-boxed.html">Boxed</a></li>
@@ -143,16 +143,16 @@
                             <li><a href="layout-adaptive-panels.html">Adaptive Panels</a></li>                            
                             <li><a href="blank.html">Blank Page</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     
-                    <li class="xn-openable">
+                    <!-- <li class="xn-openable">
                         <a href="#"><span class="fa fa-dollar"></span><span class="xn-text">Billing</span></a>                        
                         <ul>
                             <li><a href="#"><span class="fa fa-heart"></span> Pengeluaran</a></li>                            
                             <li><a href="#"><span class="fa fa-cogs"></span> Invoice Members</a></li>
                             <li><a href="#"><span class="fa fa-square-o"></span> Pemasukan Lain</a></li>
                         </ul>
-                    </li>                                        
+                    </li>       -->                                  
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>
