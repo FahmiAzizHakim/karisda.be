@@ -27,15 +27,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Peran</label>
-                    <select id="field_role" name="field_role" class="form-control select">
-                    <option></option>
-                    {foreach from=$role item=row}
-                        <option value="{$row.code_code}">{$row.code_name}</option>
-                    {/foreach}
-                    </select>
-                </div>
-                <div class="form-group">
                     <label>Aktif Status</label>
                     <select id="activestatus" class="form-control select">
                     <option value="ATSAC">Aktif</option>
