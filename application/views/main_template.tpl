@@ -103,7 +103,7 @@
                         <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-group"></span> <span class="xn-text">Tentang Kami</span></a>
                         <ul>
                             <li><a href="{$base_url}about/product/"><span class="fa fa-user"></span>Product dan Layanan</a></li>
-                            <li><a href="{$base_url}masterdata/members"><span class="fa fa-users"></span>Keunggulan</a></li>
+                            <li><a href="{$base_url}about/keunggulan"><span class="fa fa-users"></span>Keunggulan</a></li>
                             <li><a href="{$base_url}about/about_us"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
                             <li><a href="{$base_url}about/visi"><span class="fa fa-shopping-cart"></span>Visi, Misi dan Moto</a></li><li><a href="{$base_url}about/Legalitas"><span class="fa fa-shopping-cart"></span>Legalitas Kami</a></li>
                         </ul>
