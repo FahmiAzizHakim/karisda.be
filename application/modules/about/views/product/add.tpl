@@ -4,10 +4,8 @@
         <h3>Nama</h3>
             <form role="form">
                 <div class="form-group">
-                    <div class="block">
-                        <textarea class="">
-                        </textarea>
-                     </div>
+                     <div class="form-group">
+                    <input id="Nama" type="text" class="form-control" placeholder="">
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
