@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-23 09:30:04
+/* Smarty version 3.1.30, created on 2018-04-23 09:54:52
   from "C:\xampp\htdocs\karisda.be\application\views\main_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5add8b7cd7dd95_27576013',
+  'unifunc' => 'content_5add914c491f02_37418088',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68451af699894ea4b77bc19afde39aa2bfcb9d43' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\views\\main_template.tpl',
-      1 => 1524468603,
+      1 => 1524470088,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5add8b7cd7dd95_27576013 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5add914c491f02_37418088 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -219,7 +219,7 @@ masterdata/users"><span class="fa fa-user"></span>Product dan Layanan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 masterdata/members"><span class="fa fa-users"></span>Keunggulan</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-masterdata/merchant_goods"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
+about/about_us"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 masterdata/merchant_goods"><span class="fa fa-shopping-cart"></span>Visi, Misi dan Moto</a></li>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
