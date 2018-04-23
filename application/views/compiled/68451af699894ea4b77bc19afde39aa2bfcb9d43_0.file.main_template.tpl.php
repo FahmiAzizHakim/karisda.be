@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-04-23 11:08:38
+/* Smarty version 3.1.30, created on 2018-04-23 14:16:21
   from "C:\xampp\htdocs\karisda.be\application\views\main_template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5adda296530389_69094612',
+  'unifunc' => 'content_5addce958dd2c7_08040725',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68451af699894ea4b77bc19afde39aa2bfcb9d43' => 
     array (
       0 => 'C:\\xampp\\htdocs\\karisda.be\\application\\views\\main_template.tpl',
-      1 => 1524474425,
+      1 => 1524485778,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5adda296530389_69094612 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5addce958dd2c7_08040725 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -219,19 +219,26 @@ assets/images/users/avatar.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['s_user_n
                         <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-group"></span> <span class="xn-text">Tentang Kami</span></a>
                         <ul>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-about/product/"><span class="fa fa-user"></span>Product dan Layanan</a></li>
+about/product/"><span class="fa fa-shopping-cart"></span>Product dan Layanan</a></li>
+
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 about/keunggulan/"><span class="fa fa-users"></span>Keunggulan</a></li>
+
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-about/about_us"><span class="fa fa-shopping-cart"></span>Tentang Kami</a></li>
+about/about_us"><span class="fa fa-comments"></span>Tentang Kami</a></li>
+
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-about/visi"><span class="fa fa-shopping-cart"></span>Visi, Misi dan Moto</a></li><li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-about/Legalitas"><span class="fa fa-shopping-cart"></span>Legalitas Kami</a></li>
+about/visi"><span class="fa fa-info"></span>Visi, Misi dan Moto</a></li>
+
+                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+about/Legalitas"><span class="fa fa-key"></span>Legalitas Kami</a></li>
+                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+about/users"><span class="fa fa-users"></span>User</a></li>
                         </ul>
                     </li>
                     <li class="">
                         <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-berita/news"><span class="fa fa-dollar"></span><span class="xn-text">Berita</span></a>
+berita/news"><span class="fa fa-book"></span><span class="xn-text">Berita</span></a>
                         <!-- <ul>
                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 transaksi/toko"><span class="fa fa-shopping-cart"></span> Toko</a></li>
