@@ -110,7 +110,7 @@
                         </ul>
                     </li>
                     <li class="">
-                        <a href="#"><span class="fa fa-dollar"></span><span class="xn-text">Berita</span></a>
+                        <a href="{$base_url}berita/lists"><span class="fa fa-dollar"></span><span class="xn-text">Berita</span></a>
                         <!-- <ul>
                             <li><a href="{$base_url}transaksi/toko"><span class="fa fa-shopping-cart"></span> Toko</a></li>
 
