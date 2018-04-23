@@ -14,6 +14,14 @@ class news extends MY_Controller {
 
 	public function index()
 	{
+<<<<<<< HEAD
 		$this->layout('news', '');
+=======
+    	$this->layout('news/lists', '');
+	}
+	public function add()
+	{
+		$this->layout('news/add', '');
+>>>>>>> ca9d0fbdac962c3b0d583eefe95f9411941f5aff
 	}
 }
