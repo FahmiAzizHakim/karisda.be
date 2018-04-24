@@ -9,37 +9,44 @@ class Users extends MY_Controller {
 		if($this->session->userdata('user_id') == ''){
 			redirect('Login','refresh');
 		}
+		$this->load->model('M_master');
 
 	}
 
 	public function index()
 	{
-		$param = array('company_code' => $this->s_company_code);
-		$field_user = json_decode(($this->curl->simple_get($this->API.'Master_data/data_users', $param)), true);
-		$this->templates->assign( 'data_users', $field_user);
+		$data = $this->M_master->getListData('tbl_user')->result_array();
+		$i = 0;
+
+		$this->templates->assign( 'data', $data);
     	$this->layout('users/lists', '');
 	}
 
 	public function add()
 	{
-		$param_fieldtype = array('code_category' => 'USR');
-		$field_role = json_decode(($this->curl->simple_get($this->API.'Master_data/code_bycategory', $param_fieldtype)), true);
-
-		$this->templates->assign( 'role', $field_role);
 		$this->layout('users/add', '');
 	}
 
-	public function edit()
+	public function update()
 	{
-		$param_user = array('company_code' => $this->s_company_code,
-									'id' => $this->input->get('user_id'));
-		$userdata = json_decode(($this->curl->simple_get($this->API.'Master_data/single_user', $param_user)), true);
-
-		$param_fieldtype = array('code_category' => 'USR');
-		$field_role = json_decode(($this->curl->simple_get($this->API.'Master_data/code_bycategory', $param_fieldtype)), true);
-
-		$this->templates->assign( 'role', $field_role);
-		$this->templates->assign( 'userdata', $userdata);
+		$id = $this->input->get("id");
+		$data = $this->M_master->getDataWhere('id', $id,'tbl_user')->row_array();
+		$this->templates->assign( 'data', $data);
 		$this->layout('users/edit', '');
+	}
+
+	public function insert()
+	{
+		$param = $this->input->post();
+		$param['user_password'] = md5(substr(sha1($param['user_password'] . 'reds'),1,20));
+		$param['lastupd_date'] = date('d/m/Y');
+
+		$proses = $this->M_master->save('tbl_user', $param);
+		if ($proses == true) {
+			$result = "success";
+		}else{
+			$result = "error";
+		}
+		echo json_encode(array("status" => $result, "error" => 0));
 	}
 }

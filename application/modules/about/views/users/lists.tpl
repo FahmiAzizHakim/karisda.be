@@ -8,21 +8,17 @@
                     <table class="table datatable">
                         <thead>
                         <tr>
-                            <th width="20px">Username</th>
+                            <th width="20px">Usercode</th>
                             <th>Nama User</th>
-                            <th>User Group</th>
-                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                            {foreach from=$data_users item=row}
+                            {foreach from=$data item=row}
                                 <tr>
                                     <td>{$row.user_code}</td>
                                     <td>{$row.user_name}</td>
-                                    <td>{$row.user_group}</td>
-                                    <td>{$row.activestatus}</td>
-                                    <td><button type="button" class="btn btn-success active" onclick="EditUser('{$row.user_id}')"><span class="fa fa-pencil"></span>Edit</button></td>
+                                    <td><button type="button" class="btn btn-success active" onclick="EditUser('{$row.id}')"><span class="fa fa-pencil"></span>Edit</button></td>
                                 </tr>
                             {/foreach}
                         </tbody>
@@ -34,8 +30,8 @@
 <script type="text/javascript">
     base_url = '{$base_url}';
     {literal}
-    function EditUser(user_id){
-        window.location = base_url + 'about/users/edit?user_id=' + user_id;
+    function EditUser(id){
+        window.location = base_url + 'about/users/update?id=' + id;
         }
     {/literal}
 </script>

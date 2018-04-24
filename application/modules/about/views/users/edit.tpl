@@ -5,7 +5,7 @@
             <form role="form">
                 <div class="form-group">
 
-	                <label>Nama User </label>
+	                <label>Nama User</label>
 	                <input id="field_name" type="text" class="form-control" placeholder="Nama User" readonly="readonly">
                     <input id="user_id" type="hidden">
                 </div>
@@ -25,14 +25,6 @@
                     <input id="field_password2" type="password" name="field_password2" class="form-control" placeholder="Password">
 
                 </div>
-
-                <div class="form-group">
-                    <label>Aktif Status</label>
-                    <select id="activestatus" class="form-control select">
-                    <option value="ATSAC">Aktif</option>
-                    <option value="ATSNA">Non Aktif</option>
-                    </select>
-                </div>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
@@ -43,11 +35,10 @@
 </div>
 
 <script type="text/javascript">
-var user_id = "{$userdata.user_id}";
-var user_name = "{$userdata.user_name}";
-var user_code = "{$userdata.user_code}";
-var user_role = "{$userdata.user_group}";
-var api_url = '{$api_url}';
+var user_id = "{$data.id}";
+var user_name = "{$data.user_name}";
+var user_code = "{$data.user_code}";
+var base_url = '{$base_url}';
 {literal}
 $(function(){
     $("#user_id").val(user_id);
@@ -79,26 +70,20 @@ $(function(){
             return false;
             
         };
-        if($("#field_role").val() == ""){
-            alert("Peran Harus Diisi");
-            $("#field_role").focus();
-            return false;
-        };
 
          noty({text: 'Loading', layout: 'topCenter'});
          $("#BtnSubmit").attr("disabled", true);
 
         $.ajax({
             type: "POST",
-            url: api_url + "Master_data/field_update_user",
+            url: base_url + "about/users/edit",
             processData: false,
             dataType: "json",
-            data: { user_id : $("#user_id").val(),
-                    field_password : $("#field_password").val(),
-                    field_role : $("#field_role").val(),
-                    activestatus : $("#activestatus").val(),
-                    lastupd_by : $("#s_user_code").val(),
-                    company_code : $("#s_company_code").val() },
+            data: { user_name : $("#field_name").val(),
+                    user_code : $("#field_code").val(),
+                    user_password : $("#field_password").val(),
+                    lastupd_by : $("#s_user_name").val(),
+                    id : $("#user_id") },
             success: function(data) {
                 $("#BtnSubmit").removeAttr("disabled");
                 $("#noty_topCenter_layout_container").remove();
