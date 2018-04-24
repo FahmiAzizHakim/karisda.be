@@ -1,23 +1,18 @@
 <div class="row">
     <div class="panel panel-default">
         <div class="panel-body">
-        <h3>Berita</h3>
+        <h3>Keunggulan</h3>
             <form role="form">
                 <div class="form-group">
                     <label>Judul</label>
-                    <input id="judul" type="text" class="form-control" placeholder="Judul Berita">
+                    <input id="name" type="text" class="form-control" placeholder="Judul" value="{$data.keunggulan_name}">
+                    <input type="hidden" id="id" value="{$data.id}">
                 </div>
                 <div class="form-group">
-                    <label>Isi</label>
-                    <div class="block">
-                        <textarea class="summernote" id="news_detail">
+                    <label>Detail</label>
+	                <div class="block">
+                        <textarea id="desc" class="form-control">{$data.keunggulan_desc}
                         </textarea>
-                     </div>
-                <div>
-                <div class="form-group">
-                    <label>Gambar</label>
-                    <div class="block">
-                        <input type="file" multiple class="file" data-preview-file-type="any"/>
                      </div>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
@@ -35,14 +30,14 @@
     {/literal}
         var base_url = '{$base_url}';
     {literal}
-        if($("#judul").val() == ""){
-            alert("Judul Harus Diisi");
+        if($("#name").val() == ""){
+            alert("Nama Harus Diisi");
             $("#name").focus();
             return false;
         };
-        if($("#news_detail").val() == ""){
-            alert("Isi Harus Diisi");
-            $("#news_detail").focus();
+        if($("#desc").val() == ""){
+            alert("Keterangan Harus Diisi");
+            $("#desc").focus();
             return false;
         };
 
@@ -51,10 +46,11 @@
 
         $.ajax({
             type: "POST",
-            url: base_url + "berita/news/insert",
+            url: base_url + "about/keunggulan/edit",
             dataType: "json",
-            data: { berita_judul : $("#judul").val(),
-                    berita_isi : $("#news_detail").code(),
+            data: { keunggulan_name : $("#name").val(),
+                    keunggulan_desc : $("#desc").val(),
+                    id : $("#id").val(),
                     lastupd_by : $("#s_user_name").val() },
             success: function(data) {
                 $("#BtnSubmit").removeAttr("disabled");
@@ -64,7 +60,7 @@
                 {
                     alert("Data Berhasil Diproses");
                     {/literal}
-                    window.location.replace("{$base_url}berita/news");
+                    window.location.replace("{$base_url}about/keunggulan");
                     {literal}
                 }
                 else

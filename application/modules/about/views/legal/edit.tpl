@@ -1,90 +1,58 @@
 <div class="row">
     <div class="panel panel-default">
         <div class="panel-body">
-        <h3>Data User</h3>
+        <h3>Legalitas</h3>
             <form role="form">
                 <div class="form-group">
 
-                    <label>Nama User </label>
-                    <input id="field_name" type="text" class="form-control" placeholder="Nama User" readonly="readonly">
-                    <input id="user_id" type="hidden">
+                    <label>Nama </label>
+                    <input id="name" type="text" class="form-control" placeholder="Nama" value="{$data.legalitas_name}">
+                    <input id="id" type="hidden" class="form-control" placeholder="Nama" value="{$data.id}">
                 </div>
            
-                
                 <div class="form-group">
-                    <label>Aktif Status</label>
-                    <select id="activestatus" class="form-control select">
-                    <option value="ATSAC">Aktif</option>
-                    <option value="ATSNA">Non Aktif</option>
-                    </select>
+                    <label>Keterangan</label>
+                     <textarea id="desc" class="form-control">{$data.legalitas_desc}</textarea>
+                    
                 </div>
-                
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
-var user_id = "{$userdata.user_id}";
-var user_name = "{$userdata.user_name}";
-var user_code = "{$userdata.user_code}";
-var user_role = "{$userdata.user_group}";
-var api_url = '{$api_url}';
-{literal}
-$(function(){
-    $("#user_id").val(user_id);
-    $("#field_name").val(user_name);
-    $("#field_code").val(user_code);
-    $("#field_role").val(user_role);
-});
-
+    {literal}
     $("#BtnSubmit").click(function(){
-        if($("#field_name").val() == ""){
+    {/literal}
+        var base_url = '{$base_url}';
+    {literal}
+        if($("#name").val() == ""){
             alert("Nama Harus Diisi");
-            $("#field_name").focus();
+            $("#name").focus();
             return false;
         };
-        if($("#field_code").val() == ""){
-            alert("User Code Harus Diisi");
-            $("#field_code").focus();
-            return false;
-        };
-        if($("#field_password").val() == ""){
-            alert("Password Harus Diisi");
-            $("#field_password").focus();
-            return false;
-
-        };
-        if($("#field_password2").val() != $("#field_password").val()){
-            alert("Password Harus Sama");
-            $("#field_password").focus();
-            return false;
-            
-        };
-        if($("#field_role").val() == ""){
-            alert("Peran Harus Diisi");
-            $("#field_role").focus();
+        if($("#desc").val() == ""){
+            alert("Keterangan Harus Diisi");
+            $("#desc").focus();
             return false;
         };
 
-         noty({text: 'Loading', layout: 'topCenter'});
-         $("#BtnSubmit").attr("disabled", true);
+        noty({text: 'Loading', layout: 'topCenter'});
+        $("#BtnSubmit").attr("disabled", true);
 
         $.ajax({
             type: "POST",
-            url: api_url + "Master_data/field_update_user",
-            processData: false,
+            url: base_url + "about/legalitas/edit",
             dataType: "json",
-            data: { user_id : $("#user_id").val(),
-                    field_password : $("#field_password").val(),
-                    field_role : $("#field_role").val(),
-                    activestatus : $("#activestatus").val(),
-                    lastupd_by : $("#s_user_code").val(),
-                    company_code : $("#s_company_code").val() },
+            data: { legalitas_name : $("#name").val(),
+                    legalitas_desc : $("#desc").val(),
+                    id : $("#id").val(),
+                    lastupd_by : $("#s_user_name").val() },
             success: function(data) {
                 $("#BtnSubmit").removeAttr("disabled");
                 $("#noty_topCenter_layout_container").remove();
@@ -93,7 +61,7 @@ $(function(){
                 {
                     alert("Data Berhasil Diproses");
                     {/literal}
-                    window.location.replace("{$base_url}masterdata/users");
+                    window.location.replace("{$base_url}about/legalitas");
                     {literal}
                 }
                 else

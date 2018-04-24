@@ -15,16 +15,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <!-- {foreach from=$data_lapangan item=row}
+                            {foreach from=$data item=row}
                                 <tr>
-                                    <td>{$row.field_no}</td>
-                                    <td>{$row.field_name}</td>
-                                    <td>{$row.field_room_name}</td>
-                                    <td>{$row.field_type_name}</td>
-                                    <td>{$row.activestatus_name}</td>
-                                    <td><button type="button" class="btn btn-success active" onclick="EditLapangan('{$row.field_id}')"><span class="fa fa-pencil"></span>Edit</button></td>
+                                    <td>{$row.berita_judul}</td>
+                                    <td>{$row.cuplikan}</td>
+                                    <td>{$row.berita_date}</td>
+                                    <td><button type="button" class="btn btn-success active" onclick="EditUser('{$row.id}')"><span class="fa fa-pencil"></span>Edit</button></td>
                                 </tr>
-                            {/foreach} -->
+                            {/foreach}
                         </tbody>
                     </table>
                 </div>
@@ -34,10 +32,11 @@
 
 <script type="text/javascript">
 base_url = '{$base_url}';
-
-    function EditLapangan(field_id){
-        window.location = base_url + 'masterdata/lapangan/edit?field_id=' + field_id;
+    {literal}
+    function EditUser(id){
+        window.location = base_url + 'berita/news/update?id=' + id;
         }
+    {/literal}
 </script>
                             
                             

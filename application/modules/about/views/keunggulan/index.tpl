@@ -14,15 +14,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <!-- {foreach from=$data_users item=row}
+                            {foreach from=$data item=row}
                                 <tr>
-                                    <td>{$row.user_code}</td>
-                                    <td>{$row.user_name}</td>
-                                    <td>{$row.user_group}</td>
-                                    <td>{$row.activestatus}</td>
-                                    <td><button type="button" class="btn btn-success active" onclick="EditUser('{$row.user_id}')"><span class="fa fa-pencil"></span>Edit</button></td>
+                                    <td>{$row.keunggulan_name}</td>
+                                    <td>{$row.keunggulan_desc}</td>
+                                    <td><button type="button" class="btn btn-success active" onclick="EditUser('{$row.id}')"><span class="fa fa-pencil"></span>Edit</button></td>
                                 </tr>
-                            {/foreach} -->
+                            {/foreach}
                         </tbody>
                     </table>
                 </div>
@@ -32,8 +30,8 @@
 <script type="text/javascript">
     base_url = '{$base_url}';
     {literal}
-    function EditUser(user_id){
-        window.location = base_url + 'masterdata/users/edit?user_id=' + user_id;
+    function EditUser(id){
+        window.location = base_url + 'about/keunggulan/update?id=' + id;
         }
     {/literal}
 </script>

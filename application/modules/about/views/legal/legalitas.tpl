@@ -14,26 +14,26 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Fahmi</td>
-                                <td>Aktif</td>
-                                <td><button type="button" class="btn btn-success active"><span class="fa fa-pencil"></span>Edit</button></td>
-                            </tr>
-                            <tr>
-                                <td>Kholil</td>
-                                <td>Aktif</td>
-                                <td><button type="button" class="btn btn-success active"><span class="fa fa-pencil"></span>Edit</button></td>
-                            </tr>
-                            <tr>
-                                 <td>Indra</td>
-                                <td>Aktif</td>
-                                <td><button type="button" class="btn btn-success active"><span class="fa fa-pencil"></span>Edit</button></td>
-                            </tr>
+                            {foreach from=$data item=row}
+                                <tr>
+                                    <td>{$row.legalitas_name}</td>
+                                    <td>{$row.legalitas_desc}</td>
+                                    <td><button type="button" class="btn btn-success active" onclick="EditUser('{$row.id}')"><span class="fa fa-pencil"></span>Edit</button></td>
+                                </tr>
+                            {/foreach}
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
 </div>
+<script type="text/javascript">
+    base_url = '{$base_url}';
+    {literal}
+    function EditUser(id){
+        window.location = base_url + 'about/legalitas/update?id=' + id;
+        }
+    {/literal}
+</script>
                             
                             

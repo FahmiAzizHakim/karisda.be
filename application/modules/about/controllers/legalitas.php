@@ -9,23 +9,59 @@ class legalitas extends MY_Controller {
 		if($this->session->userdata('user_id') == ''){
 			redirect('Login','refresh');
 		}
+		$this->load->model('M_master');
 
 	}
 
 	public function index()
 	{
-		$param_fieldtype = array('code_category' => 'USR');
-		$field_role = json_decode(($this->curl->simple_get($this->API.'Master_data/code_bycategory', $param_fieldtype)), true);
+		$data = $this->M_master->getListData('tbl_legalitas')->result_array();
+		$i = 0;
 
-		$this->templates->assign( 'role', $field_role);
+		$this->templates->assign( 'data', $data);
 		$this->layout('legal/legalitas', '');
 	}
-		public function add()
+	public function add()
 	{
-		$param_fieldtype = array('code_category' => 'USR');
-		$field_role = json_decode(($this->curl->simple_get($this->API.'Master_data/code_bycategory', $param_fieldtype)), true);
-
-		$this->templates->assign( 'role', $field_role);
 		$this->layout('legal/add', '');
+	}
+
+	public function insert()
+	{
+		$param = $this->input->post();
+		$param['lastupd_date'] = date('d/m/Y');
+
+		$proses = $this->M_master->save('tbl_legalitas', $param);
+		if ($proses == true) {
+			$result = "success";
+		}else{
+			$result = "error";
+		}
+		echo json_encode(array("status" => $result, "error" => 0));
+	}
+
+	public function update()
+	{	
+		$id = $this->input->get("id");
+		$data = $this->M_master->getDataWhere('id', $id,'tbl_legalitas')->row_array();
+		$this->templates->assign( 'data', $data);
+		$this->layout('legal/edit', '');
+	}
+
+	public function edit()
+	{
+		$param['legalitas_name'] = $this->input->post('legalitas_name');
+		$param['legalitas_desc'] = $this->input->post('legalitas_desc');
+		$param['lastupd_by'] = $this->input->post('lastupd_by');
+		$param['lastupd_date'] = date('d/m/Y');
+		$id = $this->input->post("id");
+
+		$proses = $this->M_master->update('id', $id, $param,'tbl_legalitas');
+		if ($proses == true) {
+			$result = "success";
+		}else{
+			$result = "error";
+		}
+		echo json_encode(array("status" => $result, "error" => 0));
 	}
 }

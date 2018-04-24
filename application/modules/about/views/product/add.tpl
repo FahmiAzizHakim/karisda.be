@@ -1,24 +1,17 @@
 <div class="row">
     <div class="panel panel-default">
         <div class="panel-body">
-        <h3>Nama</h3>
+        <h3>Product dan Layanan</h3>
             <form role="form">
                 <div class="form-group">
+                    <label>Judul</label>
                      <div class="form-group">
-                    <input id="Nama" type="text" class="form-control" placeholder="">
-                <div>
-                <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
-                <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
-                </div>
-            </form>
-            <br>
-        <h3>Keterangan</h3>
-            <form role="form">
+                    <input id="product_name" type="text" class="form-control" placeholder="">
                 <div class="form-group">
-	                <div class="block">
-                        <textarea class="summernote">
-                        </textarea>
-                     </div>
+                    <label>Deskripsi</label>
+                    <textarea id="product_desc" class="summernote">
+                    </textarea>
+                 </div>
                 <div>
                 <button type="button" id="BtnSubmit" class="btn btn-success active"><span class="fa fa-check"></span>Submit</button>
                 <button type="button" class="btn btn-danger active"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
@@ -33,35 +26,12 @@
     {literal}
     $("#BtnSubmit").click(function(){
     {/literal}
-        var api_url = '{$api_url}';
+        var base_url = '{$base_url}';
     {literal}
-        if($("#field_name").val() == ""){
+        if($("#Judul").val() == ""){
             alert("Nama Harus Diisi");
-            $("#field_name").focus();
+            $("#Judul").focus();
             return false;
-        };
-        if($("#field_code").val() == ""){
-            alert("User Code Harus Diisi");
-            $("#field_code").focus();
-            return false;
-        };
-        if($("#field_password").val() == ""){
-            alert("Password Harus Diisi");
-            $("#field_password").focus();
-            return false;
-
-        };
-        if($("#field_password2").val() != $("#field_password").val()){
-            alert("Password Harus Sama");
-            $("#field_password").focus();
-            return false;
-            
-        };
-        if($("#field_role").val() == ""){
-            alert("Peran Harus Diisi");
-            $("#field_role").focus();
-            return false;
-
         };
 
         noty({text: 'Loading', layout: 'topCenter'});
@@ -69,25 +39,20 @@
 
         $.ajax({
             type: "POST",
-            url: api_url + "Master_data/field_insert_user",
+            url: base_url + "about/product/insert",
             dataType: "json",
-            data: { field_name : $("#field_name").val(),
-                    field_code : $("#field_code").val(),
-                    field_password : $("#field_password").val(),
-                    field_role : $("#field_role").val(),
-                    activestatus : $("#activestatus").val(),
-                    created_by : $("#s_user_name").val(),
-                    company_code : $("#s_company_code").val() },
+            data: { product_name : $("#product_name").val(),
+                    product_desc : $("#product_desc").code(),
+                    lastupd_by : $("#s_user_name").val() },
             success: function(data) {
                 $("#BtnSubmit").removeAttr("disabled");
                 $("#noty_topCenter_layout_container").remove();
-                alert(data.status);
 
                 if(data.status == "success")
                 {
                     alert("Data Berhasil Diproses");
                     {/literal}
-                    window.location.replace("{$base_url}masterdata/users");
+                    window.location.replace("{$base_url}about/product");
                     {literal}
                 }
                 else

@@ -83,7 +83,6 @@
                             </div> -->
                             <div class="profile-data">
                                 <div class="profile-data-name">{$s_user_name}</div>
-                                <div class="profile-data-title">Palad Futsal</div>
                                 <input type="hidden" name="s_user_name" id="s_user_name" value="{$s_user_name}">
                                 <input type="hidden" name="s_user_id" id="s_user_id" value="{$s_user_id}">
                                 <input type="hidden" name="s_user_code" id="s_user_code" value="{$s_user_code}">
@@ -98,21 +97,20 @@
                     </li>
                     <li class="xn-title">Navigation</li>
                     <li class="">
-                        <a href="{$base_url}"><span class="fa fa-user"></span> <span class="xn-text">Profile</span></a>
+                        <a href="{$base_url}about/users"><span class="fa fa-user"></span> <span class="xn-text">User</span></a>
                     </li>                    
                     <li class="xn-openable">
-                        <a href="#"><!-- <span class="fa fa-files-o"></span> --><span class="fa fa-group"></span> <span class="xn-text">Tentang Kami</span></a>
+                        <a href="#"><span class="fa fa-files-o"></span><!-- <span class="fa fa-group"></span> <span class="xn-text"> -->Tentang Kami</span></a>
                         <ul>
-                            <li><a href="{$base_url}about/product/"><span class="fa fa-shopping-cart"></span>Product dan Layanan</a></li>
+                            <li><a href="{$base_url}about/product/">Product dan Layanan</a></li>
 
-                            <li><a href="{$base_url}about/keunggulan/"><span class="fa fa-users"></span>Keunggulan</a></li>
+                            <li><a href="{$base_url}about/keunggulan/">Keunggulan</a></li>
 
-                            <li><a href="{$base_url}about/about_us"><span class="fa fa-comments"></span>Tentang Kami</a></li>
+                            <li><a href="{$base_url}about/about_us">Tentang Kami</a></li>
 
-                            <li><a href="{$base_url}about/visi"><span class="fa fa-info"></span>Visi, Misi dan Moto</a></li>
+                            <li><a href="{$base_url}about/visi">Visi, Misi dan Moto</a></li>
 
-                            <li><a href="{$base_url}about/Legalitas"><span class="fa fa-key"></span>Legalitas Kami</a></li>
-                            <li><a href="{$base_url}about/users"><span class="fa fa-users"></span>User</a></li>
+                            <li><a href="{$base_url}about/Legalitas">Legalitas Kami</a></li>
                         </ul>
                     </li>
                     <li class="">

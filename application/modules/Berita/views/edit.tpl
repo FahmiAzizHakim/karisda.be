@@ -5,12 +5,13 @@
             <form role="form">
                 <div class="form-group">
                     <label>Judul</label>
-                    <input id="judul" type="text" class="form-control" placeholder="Judul Berita">
+                    <input id="judul" type="text" class="form-control" placeholder="Judul Berita" value="{$data.berita_judul}">
+                    <input id="id" type="hidden" class="form-control" placeholder="Judul Berita" value="{$data.id}">
                 </div>
                 <div class="form-group">
                     <label>Isi</label>
                     <div class="block">
-                        <textarea class="summernote" id="news_detail">
+                        <textarea class="summernote" id="news_detail">{$data.berita_isi}
                         </textarea>
                      </div>
                 <div>
@@ -51,9 +52,10 @@
 
         $.ajax({
             type: "POST",
-            url: base_url + "berita/news/insert",
+            url: base_url + "berita/news/edit",
             dataType: "json",
             data: { berita_judul : $("#judul").val(),
+                    id : $("#id").val(),
                     berita_isi : $("#news_detail").code(),
                     lastupd_by : $("#s_user_name").val() },
             success: function(data) {

@@ -5,12 +5,12 @@
             <form role="form">
                 <div class="form-group">
                     <label>Judul</label>
-                    <input id="Keunggulan" type="text" class="form-control" placeholder="Judul">
+                    <input id="name" type="text" class="form-control" placeholder="Judul">
                 </div>
                 <div class="form-group">
                     <label>Detail</label>
 	                <div class="block">
-                        <textarea class="summernote">
+                        <textarea id="desc" class="form-control">
                         </textarea>
                      </div>
                 <div>
@@ -27,35 +27,17 @@
     {literal}
     $("#BtnSubmit").click(function(){
     {/literal}
-        var api_url = '{$api_url}';
+        var base_url = '{$base_url}';
     {literal}
-        if($("#field_name").val() == ""){
+        if($("#name").val() == ""){
             alert("Nama Harus Diisi");
-            $("#field_name").focus();
+            $("#name").focus();
             return false;
         };
-        if($("#field_code").val() == ""){
-            alert("User Code Harus Diisi");
-            $("#field_code").focus();
+        if($("#desc").val() == ""){
+            alert("Keterangan Harus Diisi");
+            $("#desc").focus();
             return false;
-        };
-        if($("#field_password").val() == ""){
-            alert("Password Harus Diisi");
-            $("#field_password").focus();
-            return false;
-
-        };
-        if($("#field_password2").val() != $("#field_password").val()){
-            alert("Password Harus Sama");
-            $("#field_password").focus();
-            return false;
-            
-        };
-        if($("#field_role").val() == ""){
-            alert("Peran Harus Diisi");
-            $("#field_role").focus();
-            return false;
-
         };
 
         noty({text: 'Loading', layout: 'topCenter'});
@@ -63,25 +45,20 @@
 
         $.ajax({
             type: "POST",
-            url: api_url + "Master_data/field_insert_user",
+            url: base_url + "about/keunggulan/insert",
             dataType: "json",
-            data: { field_name : $("#field_name").val(),
-                    field_code : $("#field_code").val(),
-                    field_password : $("#field_password").val(),
-                    field_role : $("#field_role").val(),
-                    activestatus : $("#activestatus").val(),
-                    created_by : $("#s_user_name").val(),
-                    company_code : $("#s_company_code").val() },
+            data: { keunggulan_name : $("#name").val(),
+                    keunggulan_desc : $("#desc").val(),
+                    lastupd_by : $("#s_user_name").val() },
             success: function(data) {
                 $("#BtnSubmit").removeAttr("disabled");
                 $("#noty_topCenter_layout_container").remove();
-                alert(data.status);
 
                 if(data.status == "success")
                 {
                     alert("Data Berhasil Diproses");
                     {/literal}
-                    window.location.replace("{$base_url}masterdata/users");
+                    window.location.replace("{$base_url}about/keunggulan");
                     {literal}
                 }
                 else
