@@ -7,7 +7,7 @@ class news extends MY_Controller {
 	{
 		parent::__construct();
 		if($this->session->userdata('user_id') == ''){
-			redirect('Login','refresh');
+			redirect('login','refresh');
 		}
 		$this->load->model('M_master');
 	}
