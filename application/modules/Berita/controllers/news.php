@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+// defined('BASEPATH') OR exit('No direct script access allowed');
 
 class news extends MY_Controller {
 
@@ -10,6 +10,7 @@ class news extends MY_Controller {
 			redirect('login','refresh');
 		}
 		$this->load->model('M_master');
+		$this->load->helper(array('form', 'url'));
 	}
 
 	public function index()
@@ -31,6 +32,22 @@ class news extends MY_Controller {
 
 	public function insert()
 	{
+		$config['upload_path']="./gambar/"; //path folder file upload
+		// print_r($config['upload_path']);die;
+        $config['allowed_types']='gif|jpg|png|doc'; //type file yang boleh di upload
+        $config['encrypt_name'] = TRUE; //enkripsi file name upload
+         
+        $this->load->library('upload',$config); //call library upload 
+        if($this->upload->do_upload("file")){ //upload file
+            $data = array('upload_data' => $this->upload->data()); //ambil file name yang diupload
+ 
+            $judul= $this->input->post('judul'); //get judul image
+            $image= $data['upload_data']['file_name']; //set file name ke variable image
+             
+            // $result= $this->m_upload->simpan_upload($judul,$image); //kirim value ke model m_upload
+            echo json_decode($result = "success");
+        	}
+		die;
 		$param = $this->input->post();
 		$param['lastupd_date'] = date('d/m/Y');
 
@@ -40,7 +57,7 @@ class news extends MY_Controller {
 		}else{
 			$result = "error";
 		}
-		echo json_encode(array("status" => $result, "error" => 0));
+		// echo json_encode(array("status" => $result, "error" => 0));
 	}
 
 	public function update()
