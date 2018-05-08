@@ -10,7 +10,7 @@
                 <div class="form-group">
                     <label>Isi</label>
                     <div class="block">
-                        <textarea class="summernote" id="news_detail">
+                        <textarea class="summernote" name="news_detail" id="news_detail">
                         </textarea>
                      </div>
                 <div>
@@ -46,12 +46,13 @@
                      cache:false,
                      async:false,
                       success: function(data){
-                          alert("Upload Image Berhasil.");
-                   }
+                        alert("Upload Berhasil.");
+                            {/literal}
+                                window.location.replace("{$base_url}berita/news");
+                            {literal}
+                        }
                  });
             });
-         
- 
     });
-     {/literal}
+    {/literal}
 </script>
